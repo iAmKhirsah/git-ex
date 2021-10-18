@@ -32,3 +32,11 @@ function createProjects() {
   ];
   return projs;
 }
+
+function getProjectById(id) {
+  var projects = createProjects();
+  var findProjectId = projects.filter((project) => {
+    if (project.id === id) return project;
+  });
+  return findProjectId;
+}
