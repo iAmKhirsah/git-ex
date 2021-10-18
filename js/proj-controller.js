@@ -1,7 +1,13 @@
 'use strict';
 
-renderProjects();
-renderModal();
+$(initPage);
+
+function initPage() {
+  renderProjects();
+  renderModal();
+  $('.contact-btn').click(handleContactMe);
+}
+
 function renderProjects() {
   var projects = createProjects();
   var strHTML = '';
@@ -28,6 +34,8 @@ function renderProjects() {
 function renderModal() {
   var projects = createProjects();
   var strHTML = '';
+
+  /// TO DO ONE MODAL THAT OPENS WHEN CLICKING SPECIFIC PROJECT
   for (var i = 1; i <= projects.length; i++) {
     strHTML += `    <div
       class="portfolio-modal modal fade"
@@ -73,7 +81,7 @@ function renderModal() {
                     type="button"
                   >
                     <i class="fa fa-times"></i>
-                    Go to project
+                    Check it out
                   </button></a>
                 </div>
               </div>
@@ -84,4 +92,17 @@ function renderModal() {
     </div>`;
   }
   $('.portfolio-modals').html(strHTML);
+}
+
+function handleContactMe() {
+  var email = $('.email-input').val();
+  var subject = $('.subject-input').val();
+  var msg = $('.body-message').val();
+  console.log(email, subject, msg);
+  window.open(
+    `https://mail.google.com/mail/?view=cm&fs=1&to=khirsah2211@gmail.com&su=${subject}&body=${msg}`
+  );
+  $('.email-input').val('');
+  $('.subject-input').val('');
+  $('.body-message').val('');
 }

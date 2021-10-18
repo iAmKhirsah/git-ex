@@ -84,10 +84,10 @@ body {
 .offcanvas-aside {
     position: fixed;
     height: 100%;
-    background: red;
+    background: rgb(209, 201, 201);
     width: 80vw;
     right: -80vw;
-    z-index: 10;
+    z-index: 10000;
     transition: all 0.3s ease;
     display: flex;
     flex-direction: column;
