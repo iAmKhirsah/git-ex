@@ -1,0 +1,66 @@
+body {
+  background-color: rgb(47, 47, 151);
+  color: white;
+}
+
+.cell {
+  width: 40px;
+  height: 40px;
+}
+.cell img {
+  width: 25px;
+  height: auto;
+}
+.floor {
+  background-color: #633f36;
+}
+.wall {
+  background-size: cover;
+  background-image: url(../img/rock2.png);
+}
+.counter {
+  display: inline-block;
+  padding: 5px 40px;
+  margin: 0 5px 5px 0;
+  border-radius: 32px;
+  box-sizing: border-box;
+  font-weight: 300;
+  color: #ffffff;
+  font-size: 22px;
+  background-color: #416bdd;
+  text-align: center;
+  transition: all 0.2s;
+}
+
+.remaining {
+  display: inline-block;
+  padding: 26px 30px;
+  margin: 0 5px 5px 0;
+  border-radius: 32px;
+  box-sizing: border-box;
+  font-weight: 300;
+  color: #ffffff;
+  font-size: 22px;
+  background-color: #416bdd;
+  text-align: center;
+  transition: all 0.2s;
+}
+
+.restart {
+  display: inline-block;
+  padding: 20px 50px;
+  margin: 0 5px 5px 0;
+  border-radius: 32px;
+  box-sizing: border-box;
+  font-weight: 300;
+  color: #ffffff;
+  background-color: #4eb5f1;
+  text-align: center;
+  transition: all 0.2s;
+  margin-left: 200px;
+}
+
+.victory {
+  color: #4eb5f1;
+  margin: 10px;
+}
